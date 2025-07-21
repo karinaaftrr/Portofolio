@@ -304,25 +304,47 @@ nav a {
   }
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tampil saat layar kecil */
 @media screen and (max-width: 480px) {
-  .text-container h1,
-  .text-container h2 {
-    font-size: 20px;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
   }
 
-  .about-title {
-    font-size: 28px;
+  nav {
+    width: 100%;
   }
 
-  .text h2 {
-    font-size: 22px;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2a003f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 998;
   }
 
-  .text h3 {
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ffffff30;
+  }
+
+  nav a {
     font-size: 18px;
-  }
-
-  nav ul {
-    gap: 8px;
   }
 }
