@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +9,7 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -45,6 +45,7 @@ nav a {
   font-size: 18px;
 }
 
+/* HOME SECTION */
 .Home {
   width: 100%;
   min-height: 100vh;
@@ -75,9 +76,10 @@ nav a {
 }
 
 .welcome {
-   font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* GLOWING TEXT */
 .glow-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -91,6 +93,7 @@ nav a {
   font-weight: bold;
 }
 
+/* ABOUT */
 .about {
   display: flex;
   align-items: center;
@@ -101,90 +104,70 @@ nav a {
 }
 
 .about-section {
-    padding: 60px 40px;
-    text-align: center;
-    color: #fff;
+  padding: 60px 40px;
+  text-align: center;
+  color: #fff;
 }
 
 .about-title {
-    font-size: 36px;
-    font-weight: 800;
-    color: #e6b3ff;
-    margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #e6b3ff;
+  margin-bottom: 50px;
 }
 
 .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .text {
-    flex: 1;
-    text-align: left;
-    padding-right: 30px;
+  flex: 1;
+  text-align: left;
+  padding-right: 30px;
 }
 
 .text h3 {
-    font-size: 24px;
-    color: #da8cff;
+  font-size: 24px;
+  color: #da8cff;
 }
 
 .text h2 {
-    font-size: 28px;
-    font-weight: 800;
-    margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .text p {
-    line-height: 1.8;
-    margin-bottom: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .socials a {
-    color: white;
-    font-size: 24px;
-    margin-right: 15px;
-    transition: transform 0.2s;
+  color: white;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: transform 0.2s;
 }
 
 .socials a:hover {
-    transform: scale(1.2);
-    color: #e6b3ff;
+  transform: scale(1.2);
+  color: #e6b3ff;
 }
 
 .photo img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #b366ff;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #b366ff;
 }
 
-.project-section {
-  background-color: #1b0033;
-  padding: 100px 50px;
-  text-align: center;
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin-top: 40px;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-}
-
+/* PROJECT */
 .project-section {
   background-color: #1b0033;
   padding: 100px 50px;
@@ -244,17 +227,102 @@ nav a {
   line-height: 1.4;
 }
 
-.project p {
-  font-size: 16px;
-  color: #e0d5e8;
-  text-align: center;
-  line-height: 1.4;
-}
-
-
+/* GLOW ANIMATION */
 @keyframes glowing {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* ===============================
+   ✅ MEDIA QUERY - RESPONSIVE
+   =============================== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .Home {
+    flex-direction: column;
+    padding: 140px 20px 60px;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 250px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .photo img {
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .project {
+    max-width: 100%;
+  }
+
+  .project-images {
+    flex-direction: column !important;
+  }
+
+  .project-images.horizontal img {
+    height: 200px;
+  }
+
+  .project-images img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-container h1,
+  .text-container h2 {
+    font-size: 20px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .text h2 {
+    font-size: 22px;
+  }
+
+  .text h3 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+}
